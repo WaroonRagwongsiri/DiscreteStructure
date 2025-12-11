@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fontspec}
+
+\setmainfont{Kinnari}
+[
+	Extension = .ttf,
+	UprightFont = *,
+	BoldFont = *-Bold,
+	ItalicFont = *-Italic,
+	BoldItalicFont = *-BoldItalic
+]
+
+\title{Homework 1}
+\author{68011008 Waroon Ragwongsiri}
+\date{11/12/2025}
+
+\begin{document}
+
+\maketitle
+
+\section{ให้นักศึกษาหาค่า $P(P(P(P(\emptyset))))$}
+
+\begin{equation} \label{eq1}
+	P(\emptyset) = \{ \emptyset \}
+\end{equation}
+
+\begin{equation} \label{eq2}
+	P(P(\emptyset)) = \{ \emptyset, \{\emptyset\} \}
+\end{equation}
+
+\begin{equation} \label{eq3}
+	P(P(P(\emptyset))) = \{ \emptyset, \{\emptyset\}, \{\{\emptyset\}\}, \{ \emptyset, \{\emptyset\} \} \}
+\end{equation}
+
+\begin{equation} \label{eq4}
+\begin{aligned}
+P(P(P(P(\emptyset)))) = &\{ \\
+&1.\ \emptyset, \\
+&2.\ \{\emptyset\}, \\
+&3.\ \{\{\emptyset\}\}, \\
+&4.\ \{\{\{\emptyset\}\}\}, \\
+&5.\ \{\{\emptyset,\{\emptyset\}\}\}, \\
+&6.\ \{\emptyset, \{\emptyset\}\}, \\
+&7.\ \{\emptyset, \{\{\emptyset\}\}\}, \\
+&8.\ \{\emptyset, \{\emptyset,\{\emptyset\}\}\}, \\
+&9.\ \{\{\emptyset\}, \{\{\emptyset\}\}\}, \\
+&10.\ \{\{\emptyset\}, \{\emptyset,\{\emptyset\}\}\}, \\
+&11.\ \{\{\{\emptyset\}\}, \{\emptyset,\{\emptyset\}\}\}, \\
+&12.\ \{\emptyset, \{\emptyset\}, \{\{\emptyset\}\}\}, \\
+&13.\ \{\emptyset, \{\emptyset\}, \{\emptyset,\{\emptyset\}\}\}, \\
+&14.\ \{\emptyset, \{\{\emptyset\}\}, \{\emptyset,\{\emptyset\}\}\}, \\
+&15.\ \{\{\emptyset\}, \{\{\emptyset\}\}, \{\emptyset,\{\emptyset\}\}\}, \\
+&16.\ \{\emptyset, \{\emptyset\}, \{\{\emptyset\}\}, \{\emptyset,\{\emptyset\}\}\} \\
+&\}
+\end{aligned}
+\end{equation}
+
+\end{document}
