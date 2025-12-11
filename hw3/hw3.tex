@@ -1,0 +1,65 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fontspec}
+
+\setmainfont{Kinnari}
+[
+	Extension = .ttf,
+	UprightFont = *,
+	BoldFont = *-Bold,
+	ItalicFont = *-Italic,
+	BoldItalicFont = *-BoldItalic
+]
+
+\title{Homework 3}
+\author{68011008 Waroon Ragwongsiri}
+\date{11/12/2025}
+
+\begin{document}
+
+\maketitle
+
+{\small
+\section{ให้ $f(x) = 3x - 2$ และ $g(x) = x^2 + 1$ จงหา $(g \circ f)(x)$ และ $(f \circ g)(x)$}
+}
+\subsection{$(g \circ f)(x)$}
+\begin{align}
+	(g \circ f)(x) &= f(x)^2 + 1 \\
+	(g \circ f)(x) &= (3x - 2)^2 + 1
+\end{align}
+
+\subsection{$(f \circ g)(x)$}
+\begin{align}
+	(f \circ g)(x) &= 3(g(x)) - 2 \\
+	(f \circ g)(x) &= 3(x^2 + 1) - 2 \\
+	(f \circ g)(x) &= 3x^2 + 3 - 2 \\
+	(f \circ g)(x) &= 3x^2 + 1
+\end{align}
+
+{\small
+\section{จงหา $f^{-1}$ เมื่อ $f(x) = \frac{2x + 5}{3}$}
+}
+\subsection{$f^{-1}$}
+\begin{align}
+	let \quad y &= f(x) \\
+	y &= \frac{2x + 5}{3} \\
+	inverse ; \quad x &= \frac{2y + 5}{3} \\
+	3x &= 2y + 5 \\
+	3x - 5 &= 2y \\
+	\frac{3x - 5}{2} &= y \\
+	f^{-1} &= \frac{3x - 5}{2}
+\end{align}
+
+{\small
+\section{จงอธิบายว่าทำไม $f(x) = x^2 + 1$ จาก $\mathbb{R} \rightarrow \mathbb{R}$ ถึงไม่มี inverse function}
+}
+\subsection{}
+เนื่องจาก $f(x) = x^2 + 1$ ไม่ใช่ bijective function \\
+และเมื่อนำไป inverse จะทำให้ x ของ inverse มี y หลายค่า \\
+ตัวอย่าง:
+\begin{align}
+	f(-2) = f(2) &= 5 \\
+	f^{-1}(5) &= \pm 2
+\end{align}
+
+\end{document}
