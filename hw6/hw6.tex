@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fontspec}
+
+\setmainfont{Kinnari}
+[
+	Extension = .ttf,
+	UprightFont = *,
+	BoldFont = *-Bold,
+	ItalicFont = *-Italic,
+	BoldItalicFont = *-BoldItalic
+]
+
+\title{Homework 6}
+\author{68011008 Waroon Ragwongsiri}
+\date{18/12/2025}
+
+\begin{document}
+
+\maketitle
+
+{\small
+\section{โจทย์ : ผลบวกของเลขคี่ 2 ตัวได้เลขคู่}
+}
+\begin{align}
+	let \ n &= 2a + 1, a \in \mathbb{Z} \\
+	let \ m &= 2b + 1, b \in \mathbb{Z} \\
+\end{align}
+\subsection{Proof by Direct Proof}
+\begin{align}
+	n + m &= 2a + 1 + 2b + 1 \\
+	n + m &= 2(a + b + 1) \\
+	let \ p &= a + b + 1 \\
+	p &= \mathbb{Z} + \mathbb{Z} + \mathbb{Z} \\
+	\therefore p &\in \mathbb{Z} \\
+	n + m &= 2p, p \in \mathbb{Z} \\
+\end{align}
+$\therefore$ ผลบวกของเลขคี่ 2 ตัวได้เลขคู่
+
+\end{document}
