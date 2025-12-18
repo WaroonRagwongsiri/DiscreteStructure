@@ -1,0 +1,73 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fontspec}
+
+\setmainfont{Kinnari}
+[
+	Extension = .ttf,
+	UprightFont = *,
+	BoldFont = *-Bold,
+	ItalicFont = *-Italic,
+	BoldItalicFont = *-BoldItalic
+]
+
+\title{Homework 7}
+\author{68011008 Waroon Ragwongsiri}
+\date{18/12/2025}
+
+\begin{document}
+
+\maketitle
+
+% Q1
+{\small
+\section{For all of non-negative integer $n$, \\ $1+2+2^{2}+...+2^{n} = 2^{n+1} - 1$}
+}
+\subsection{Prove by induction}
+\begin{align}
+	&Let \ P(n) \ be \ the \ statement: \\
+	&1+2+2^{2}+...+2^{n} = 2^{n+1} - 1
+\end{align}
+\subsubsection{P(base), base = 0}
+\begin{align}
+	2^{0} &= 2^{0+1} - 1 \\
+	1 &= 1 \\
+	\therefore P(base) &\equiv True
+\end{align}
+\subsubsection{P(n+1)}
+\begin{align}
+	1+2+2^{2}+...+2^{n}+2^{n+1} &= 2^{n+1} - 1 + 2^{n+1} \\
+	1+2+2^{2}+...+2^{n}+2^{n+1} &= 2(2^{n+1}) - 1 \\
+	1+2+2^{2}+...+2^{n}+2^{n+1} &= 2^{n+2} - 1 \\
+	\therefore P(n+1) &\equiv True
+\end{align}
+$\therefore$ For all of non-negative integer $n$, $1+2+2^{2}+...+2^{n} = 2^{n+1} - 1$
+
+% Pagebreak
+\pagebreak
+
+% Q2
+{\small
+\section{For all positive integer $n$, \\ $n\ <\ 2^{n}$}
+}
+\subsection{Prove by induction}
+\begin{align}
+	&Let \ P(n) \ be \ the \ statement: \\
+	&n\ <\ 2^{n}
+\end{align}
+\subsubsection{P(base), base = 1}
+\begin{align}
+	1 &< 2^{1} \\
+	\therefore P(base) &\equiv True
+\end{align}
+\subsubsection{P(n+1)}
+\begin{align}
+	n + 1 &< 2^{n + 1} \\
+	n + 1 &< 2 \cdot 2^{n} \\
+	n + 1 &< 2^{n} + 2^{n} \\
+	from\ n < 2^{n}\ and\ 1 < 2^{n}\ &from\ P(base)\ for\ n\ \geq 1 \\
+	\therefore P(n+1) &\equiv True
+\end{align}
+$\therefore$ For all positive integer $n$, \\ $n\ <\ 2^{n}$
+
+\end{document}
