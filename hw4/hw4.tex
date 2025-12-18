@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fontspec}
+
+\setmainfont{Kinnari}
+[
+	Extension = .ttf,
+	UprightFont = *,
+	BoldFont = *-Bold,
+	ItalicFont = *-Italic,
+	BoldItalicFont = *-BoldItalic
+]
+
+\title{Homework 4}
+\author{68011008 Waroon Ragwongsiri}
+\date{18/12/2025}
+
+\begin{document}
+
+\maketitle
+
+{\small
+\section{โจทย์ : ถ้า $n$ เป็นเลขคี่ แล้ว $n^{2}$ เป็นเลขคี่}
+}
+\begin{align}
+	let n &= 2k + 1, k \in \mathbb{Z}^{+}
+\end{align}\subsection{Proof by Direct Proof}
+\begin{align}
+	n^{2} &= (2k + 1)^{2} \\
+	n^{2} &= 4k^{2} + 4k + 1 \\
+	n^{2} &= 2(2k^2 + 2k) + 1 \\
+	let p &= 2k^2 + 2k \\
+	p &= \mathbb{Z}^{+} + \mathbb{Z}^{+} \\
+	\therefore p &\in \mathbb{Z}^{+} \\
+	n^{2} &= 2p + 1, p \in \mathbb{Z}^{+} \\
+\end{align}
+$\therefore$ ถ้า $n$ เป็นเลขคี่ แล้ว $n^{2}$ เป็นเลขคี่
+
+\end{document}
