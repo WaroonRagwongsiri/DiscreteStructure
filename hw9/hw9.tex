@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fontspec}
+
+\setmainfont{Kinnari}
+[
+	Extension = .ttf,
+	UprightFont = *,
+	BoldFont = *-Bold,
+	ItalicFont = *-Italic,
+	BoldItalicFont = *-BoldItalic
+]
+
+\title{Homework 9}
+\author{68011008 Waroon Ragwongsiri}
+\date{25/12/2025}
+
+\begin{document}
+
+\maketitle
+
+% Q1
+{\small
+\section{จงพิสูจน์ว่า $(a \mod n) = (b \mod n)$ แล้ว $n \mid (a-b)$}
+}
+\begin{align}
+	let \ a &= nk_1 + p, p \in \mathbb{Z}_{\ge 0} \\
+	let \ b &= nk_2 + p, p \in \mathbb{Z}_{\ge 0} \\
+	a - b &= (nk_1 + p) - (nk_2 + p) \\ 
+	a - b &= nk_1 + p - nk_2 - p \\
+	a - b &= nk_1 - nk_2 \\
+	a - b &= n(k_1 - k_2) \\
+	let \ x &= k_1 - k_2 \\
+	x &= \mathbb{Z}_{\ge 0} - \mathbb{Z}_{\ge 0} \\
+	\therefore x &\in \mathbb{Z} \\
+	a - b &= nx, x \in \mathbb{Z}
+\end{align}
+\subitem
+$\therefore$ $(a \mod n) = (b \mod n)$ แล้ว $n \mid (a-b)$
+
+\end{document}
