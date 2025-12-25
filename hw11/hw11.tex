@@ -24,20 +24,16 @@
 \section{จงพิสูจน์ว่า ตัวเลขที่หาร 3 ลงตัว จะมีผลรวมเลขโดดแต่ละตัว หาร 3 ลงตัวด้วย}
 }
 \begin{align}
-	let \ x &= a_n \cdot 10^{n} + a_{n-1} \cdot 10^{n-1} + ... + a_1 \cdot 10^{1} + a_0
+	let \ x &= a_n \cdot 10^{n} + a_{n-1} \cdot 10^{n-1} + ... + a_1 \cdot 10^{1} + a_0 \\
+	and \ 3 \mid x
 \end{align}
-\subsection{Induction}
+\subsection{Prove by Direct Prove}
 \begin{align}
-	Let \ &P(n)\ be\ the\ statement: \\
-	&x = 3k, k \in \mathbb{Z} \\
-	&every\ n\ written\ as\ x\ and\ sum\ of\ each\ a_n\ is\ divisible\ by\ 3 \\
-\end{align}
-\subsubsection{P(0)}
-\begin{align}
-	x &= 3 \cdot 0
-	x &= 0 \\
-	a_0 &= 0 \\
-	\sum_{i=0}^{n}
+	from\ 10^{m} \mod 3 &= 1, m \in \mathbb{Z}_{\geq0} \\
+	x &\equiv a_n + a_{n-1} + ... + a_1 + a_0 \quad ( \mod 3) \\
+	from \ 3 &\mid x \\
+	x &\equiv 0 \quad ( \mod 3)\\
+	0 &\equiv a_n + a_{n-1} + ... + a_1 + a_0 \quad ( \mod 3)
 \end{align}
 $\therefore$ ตัวเลขที่หาร 3 ลงตัว จะมีผลรวมเลขโดดแต่ละตัว หาร 3 ลงตัวด้วย
 
