@@ -1,0 +1,45 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fontspec}
+
+\setmainfont{Kinnari}
+[
+	Extension = .ttf,
+	UprightFont = *,
+	BoldFont = *-Bold,
+	ItalicFont = *-Italic,
+	BoldItalicFont = *-BoldItalic
+]
+
+\title{Homework 9}
+\author{68011008 Waroon Ragwongsiri}
+\date{25/12/2025}
+
+\begin{document}
+
+\maketitle
+
+% Q1
+{\small
+\section{$2^{60} \mod 7 = ?$}
+}
+\begin{align}
+	2^{1} \mod 7 &= 2 \mod 7 = 2 \\
+	2^{2} \mod 7 &= 4 \mod 7 = 4 \\
+	2^{3} \mod 7 &= 8 \mod 7 = 1 \\
+	2^{4} \mod 7 &= 16 \mod 7 = 2 \\
+	2^{5} \mod 7 &= 32 \mod 7 = 4 \\
+	2^{6} \mod 7 &= 64 \mod 7 = 1 \\
+	&...
+\end{align}
+\begin{center}
+	this\ pattern\ repeat\ every\ 3\ step \\
+\end{center}
+\begin{align}
+	\therefore 60 \mod 3 &= 0 \\
+	\therefore 2^{60} \mod 7 &= 2^{3} \mod 7 = 1
+\end{align}
+\subitem
+$\therefore$ $2^{60} \mod 7 = 1$
+
+\end{document}
