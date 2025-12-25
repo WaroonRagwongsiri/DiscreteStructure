@@ -1,0 +1,70 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fontspec}
+
+\setmainfont{Kinnari}
+[
+	Extension = .ttf,
+	UprightFont = *,
+	BoldFont = *-Bold,
+	ItalicFont = *-Italic,
+	BoldItalicFont = *-BoldItalic
+]
+
+\title{Homework 8}
+\author{68011008 Waroon Ragwongsiri}
+\date{25/12/2025}
+
+\begin{document}
+
+\maketitle
+
+% Q1
+{\small
+\section{if $a \mid b$ and $a \mid c$ then $a \mid (b+c)$}
+}
+\begin{align}
+	let \ b &= ax, x \in \mathbb{Z} \\
+	let \ c &= ay, y \in \mathbb{Z} \\
+	b + c &= ax + ay \\
+	b + c &= a(x + y) \\
+	let p &= x + y \\
+	p &= \mathbb{Z} + \mathbb{Z} \\
+	\therefore p &\in \mathbb{Z} \\
+	b + c &= ap
+\end{align}
+\subitem
+$\therefore$ if $a \mid b$ and $a \mid c$ then $a \mid (b+c)$
+
+% Q2
+{\small
+\section{if $a \mid b$ then $a \mid bc$, for all integer $c$}
+}
+\begin{align}
+	let \ b &= ax, x \in \mathbb{Z} \\
+	bc &= axc, c \in \mathbb{Z} \\
+	bc &= a(xc) \\
+\end{align}
+\subitem
+$\therefore$ if $a \mid b$ then $a \mid bc$, for all integer $c$
+
+% Q3
+{\small
+\section{if $d \mid n$ and $n \mid d$ then $d = \pm n$}
+}
+\begin{align}
+	let \ d &= n k_1, k_1 \in \mathbb{Z} \\
+	let \ n &= d k_2, k_2 \in \mathbb{Z} \\
+	d &= d k_1 k_2 \\
+	1 &= k_1 k_2 \\
+	k_1 &=\frac{1}{k_2} \\
+	from k_1 &\in \mathbb{Z} and k_2 \in \mathbb{Z} \\
+	\therefore k_2 &\in \{ -1, 1 \} \\
+	\therefore k_1 &\in \{ -1, 1 \} \\
+	d &= \pm n \\
+	n &= \pm d \\
+\end{align}
+\subitem
+$\therefore$ if $d \mid n$ and $n \mid d$ then $d = \pm n$
+
+\end{document}
