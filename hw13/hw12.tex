@@ -1,0 +1,34 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fontspec}
+
+\setmainfont{Kinnari}
+[
+	Extension = .ttf,
+	UprightFont = *,
+	BoldFont = *-Bold,
+	ItalicFont = *-Italic,
+	BoldItalicFont = *-BoldItalic
+]
+
+\title{Homework 13}
+\author{68011008 Waroon Ragwongsiri}
+\date{08/01/2026}
+
+\begin{document}
+
+\maketitle
+
+% Q1
+{\small
+\section{มีลูกเสือ 100 คน แบ่งเป็น 10 หมู่ หมู่ละ 10 คน ไปจัดแถวชุมนุมรอบกองไฟ ได้ทั้งหมด กี่วิธี}
+}
+\begin{align}
+	Arrange\ 10\ troops\ to\ circle \equiv (10 - 1)! \\
+	In\ 10\ Troop\ Have\ 10\ peoples \equiv (10!)^{10} \\
+	\therefore Arrange\ 10\ troops\ 10\ peoples\ each\ troops\ is\ (10 - 1)! \cdot (10!)^{10}
+\end{align}
+\therefore มีลูกเสือ 100 คน แบ่งเป็น 10 หมู่ หมู่ละ 10 คน ไปจัดแถวชุมนุมรอบกองไฟ ได้ทั้งหมด $(10 - 1)! \cdot (10!)^{10}$ วิธี
+
+
+\end{document}
