@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fontspec}
+
+\setmainfont{Kinnari}
+[
+	Extension = .ttf,
+	UprightFont = *,
+	BoldFont = *-Bold,
+	ItalicFont = *-Italic,
+	BoldItalicFont = *-BoldItalic
+]
+
+\title{Homework 16}
+\author{68011008 Waroon Ragwongsiri}
+\date{19/02/2026}
+
+\begin{document}
+
+\maketitle
+
+% Q1
+{\small
+\section{$(Q \lor R) \implies P \equiv (Q \implies P) \land (R \implies P)$}
+}
+\begin{align}
+	(Q \lor R) \implies P &\equiv (Q \implies P) \land (R \implies P) \\
+	\neg (Q \lor R) \lor P &\equiv (Q \implies P) \land (R \implies P), Material Implication \\
+	(\neg Q \land \neg R) \lor P &\equiv (Q \implies P) \land (R \implies P), De Morgan \\
+	(\neg Q \lor P) \land (\neg R \lor P)&\equiv (Q \implies P) \land (R \implies P), Distribution \\
+	(Q \implies P) \land (R \implies P)&\equiv (Q \implies P) \land (R \implies P), Material Implication
+\end{align}
+\therefore $(Q \lor R) \implies P \equiv (Q \implies P) \land (R \implies P)$
+
+\break
+
+{\small
+\section{$((p \lor q) \land \neg p) \implies q$ เป็น Tautology}
+}
+\begin{align}
+	((p \lor q) \land \neg p) \implies q &\equiv T \\
+	\neg ((p \lor q) \land \neg p) \lor q &\equiv T, Material Implication \\
+	(\neg (p \lor q) \lor p) \lor q &\equiv T, De Morgan \\
+	\neg (p \lor q) \lor (p \lor q) &\equiv T, Association
+\end{align}
+\therefore $((p \lor q) \land \neg p) \implies q$ เป็น Tautology
+
+\end{document}
