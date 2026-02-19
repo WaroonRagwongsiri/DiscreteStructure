@@ -1,0 +1,78 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fontspec}
+
+\setmainfont{Kinnari}
+[
+	Extension = .ttf,
+	UprightFont = *,
+	BoldFont = *-Bold,
+	ItalicFont = *-Italic,
+	BoldItalicFont = *-BoldItalic
+]
+
+\title{Homework 17}
+\author{68011008 Waroon Ragwongsiri}
+\date{19/02/2026}
+
+\begin{document}
+
+\maketitle
+
+% Q1
+{\small
+\section{$\neg ((\neg p \land q) \lor (\neg p \land \neg q)) \lor (p \land q) \equiv p$}
+}
+\begin{align}
+	\neg ((\neg p \land q) \lor (\neg p \land \neg q)) \lor (p \land q) &\equiv p \\
+	\neg (\neg p \land (q \lor \neg q)) \lor (p \land q) &\equiv p, Distribution \\
+	\neg (\neg p \land T) \lor (p \land q) &\equiv p, Tautology \\
+	\neg (\neg p) \lor (p \land q) &\equiv p, Tautology \\
+	p \lor (p \land q) &\equiv p, Double Complement \\
+	(p \land T) \lor (p \land q) &\equiv p, Tautology \\
+	p \land (T \lor q) &\equiv p, Distribution \\
+	p \land T &\equiv p, Tautology \\
+	p &\equiv p, Tautology
+\end{align}
+\therefore{$\neg ((\neg p \land q) \lor (\neg p \land \neg q)) \lor (p \land q) \equiv p$}
+
+\break
+
+% Q2
+{\small
+\section{$(p \land (\neg (\neg p \lor q))) \lor (p \land q) \equiv p$}
+}
+\begin{align}
+	(p \land (\neg (\neg p \lor q))) \lor (p \land q) &\equiv p \\
+	(p \land (p \land \neg q)) \lor (p \land q) &\equiv p, De Morgan \\
+	(p \land p \land \neg q) \lor (p \land q) &\equiv p, Association \\
+	(p \land \neg q) \lor (p \land q) &\equiv p, Tautology \\
+	p \land (\neg q \lor q) &\equiv p, Distribution \\
+	p \land (T) &\equiv p, Tautology \\
+	p &\equiv p, Tautology
+\end{align}
+\therefore{$(p \land (\neg (\neg p \lor q))) \lor (p \land q) \equiv p$}
+
+\break
+
+% Q3
+{\small
+\section{$(\neg P \land (P \implies Q)) \implies \neg Q \equiv P \lor \neg Q$}
+}
+\begin{align}
+	(\neg P \land (P \implies Q)) \implies \neg Q &\equiv P \lor \neg Q \\
+	Q \implies \neg (\neg P \land (P \implies Q)) &\equiv P \lor \neg Q, Contraposition \\
+	Q \implies (P \lor \neg (P \implies Q)) &\equiv P \lor \neg Q, De Morgan \\
+	\neg Q \lor (P \lor \neg (\neg P \lor Q)) &\equiv P \lor \neg Q, Material Implication \\
+	\neg Q \lor (P \lor (P \land \neg Q)) &\equiv P \lor \neg Q, De Morgan \\
+	P \lor (\neg Q \lor (P \land \neg Q)) &\equiv P \lor \neg Q, Association \\
+	P \lor ((\neg Q \lor P) \land (\neg Q \lor \neg Q)) &\equiv P \lor \neg Q, Distribution \\
+	P \lor ((\neg Q \lor P) \land \neg Q) &\equiv P \lor \neg Q, Idempotent \\
+	(P \lor (\neg Q \lor P)) \land (P \lor \neg Q) &\equiv P \lor \neg Q, Distribution \\
+	((P \lor P) \lor \neg Q) \land (P \lor \neg Q) &\equiv P \lor \neg Q, Association \\
+	(P \lor \neg Q) \land (P \lor \neg Q) &\equiv P \lor \neg Q, Idempotent \\
+	P \lor \neg Q &\equiv P \lor \neg Q, Idempotent
+\end{align}
+\therefore{$(\neg P \land (P \implies Q)) \implies \neg Q \equiv P \lor \neg Q$}
+
+\end{document}
