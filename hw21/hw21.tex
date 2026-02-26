@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fontspec}
+\usepackage{etoolbox}
+\AtBeginEnvironment{align}{\setcounter{equation}{0}}
+
+\setmainfont{Kinnari}
+[
+	Extension = .ttf,
+	UprightFont = *,
+	BoldFont = *-Bold,
+	ItalicFont = *-Italic,
+	BoldItalicFont = *-BoldItalic
+]
+
+\title{Homework 21}
+\author{68011008 Waroon Ragwongsiri}
+\date{19/02/2026}
+
+\begin{document}
+
+\maketitle
+
+% Q1
+{\small
+\section{$Premises: q \implies r , (r \lor k) \implies (m \lor m). Prove: q \implies m$}
+}
+\subsection{Prove by Indirect deduction}
+\begin{align}
+	&q \implies r \quad & Premise \\
+	&(r \lor k) \implies (m \lor m) \quad & Premise \\
+	&\neg (q \implies m) \quad & Assumtion \\
+	&\neg (\neg q \lor m) \quad & 3 \ Material Implication \\
+	&q \land \neg m \quad & 4 \ De Morgan, Double Negation \\
+	&\neg m \quad & 5 \ Simplication \\
+	&(r \lor k) \implies m \quad & 2 \ Idempotent \\
+	&\neg (r \lor k) \quad & 6,7 \ Modus Tollens \\
+	&\neg r \land \neg k \quad & 8 \ De Morgan \\
+	&\neg r \quad & 9 \ Simplication \\
+	&q \quad & 5 \ Simplication \\
+	&\neg q \quad & 1,10 \ Modus Tollens \\
+	&False \quad & 12,13 \ Identity
+\end{align}
+\therefore {$q \implies m$}
+
+\end{document}
