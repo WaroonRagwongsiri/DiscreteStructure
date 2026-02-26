@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fontspec}
+\usepackage{etoolbox}
+\AtBeginEnvironment{align}{\setcounter{equation}{0}}
+
+\setmainfont{Kinnari}
+[
+	Extension = .ttf,
+	UprightFont = *,
+	BoldFont = *-Bold,
+	ItalicFont = *-Italic,
+	BoldItalicFont = *-BoldItalic
+]
+
+\title{Homework 19}
+\author{68011008 Waroon Ragwongsiri}
+\date{19/02/2026}
+
+\begin{document}
+
+\maketitle
+
+% Q1
+{\small
+\section{$Premises: \ p \implies ( q \land r), s \implies r,r  \implies p. Prove: s \implies q$}
+}
+\begin{align}
+	&p \implies (q \land r) \quad & Premise \\
+	&s \implies r \quad & Premise \\
+	&r \implies p \quad & Premise \\
+	&s \implies p \quad & 2,3 \ Hypothetical Syllogism \\
+	&s \implies (q \land r) \quad & 4,1 \ Hypothetical Syllogism \\
+	&\neg s \lor (q \land r) \quad & 5 \ Material Implication \\
+	&(\neg s \lor q) \land (\neg s \lor r) \quad & 6 \ Distribution \\
+	&\neg s \lor q \quad & 7 \ Simplication \\
+	&s \implies q \quad & 8 \ Material Implication
+\end{align}
+\therefore {$p \implies ( q \land r), s \implies r,r  \implies p. Prove: s \implies q$}
+
+\break
+
+{\small
+\section{$Premises: \neg (r \lor s), \neg p \implies s, p \implies q. Prove: q$}
+}
+\begin{align}
+	&\neg (r \lor s) \quad & Premise \\
+	&\neg p \implies s \quad & Premise \\
+	&p \implies q \quad & Premise \\
+	&\neg s \implies p \quad & 2 \ Contrapositive \\
+	&\neg s \implies q \quad & 3,4 \ Hypothetical Syllogism \\
+	&\neg r \land \neg s \quad & 1 \ De Morgan \\
+	&\neg s \quad & 6 \ Simplication \\
+	&q \quad & 5,7 \ Modus Ponens
+\end{align}
+\therefore {$Premises: \neg (r \lor s), \neg p \implies s, p \implies q. Prove: q$}
+
+\break
+
+{\small
+\section{$Premises: (p \land q), p \implies r, (q \land r) \implies s. Prove: s$}
+}
+\begin{align}
+	&p \land q \quad & Premise \\
+	&p \implies r \quad & Premise \\
+	&(q \land r) \implies s \quad & Premise \\
+	&p \quad & 1 \ Simplication \\
+	&r \quad & 2,4 \ Modus Ponens \\
+	&q \quad & 1 \ Simplication \\
+	&q \land r \quad & 5,6 \ Conjunctive \\
+	&s \quad & 3,7 \ Modus Ponens
+\end{align}
+\therefore {$Premises: (p \land q), p \implies r, (q \land r) \implies s. Prove: s$}
+
+\end{document}
