@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fontspec}
+\usepackage{etoolbox}
+\AtBeginEnvironment{align}{\setcounter{equation}{0}}
+
+\setmainfont{Kinnari}
+[
+	Extension = .ttf,
+	UprightFont = *,
+	BoldFont = *-Bold,
+	ItalicFont = *-Italic,
+	BoldItalicFont = *-BoldItalic
+]
+
+\title{Homework 20}
+\author{68011008 Waroon Ragwongsiri}
+\date{19/02/2026}
+
+\begin{document}
+
+\maketitle
+
+% Q1
+{\small
+ณ ศาลแห่งหนึ่งมีการเบิกความดังนี้ \\
+ก. ถ้าลูกความมีความผิด มีดต้องอยู่ในลิ้นชัก \\
+ข. มีดไม่ได้อยู่ในลิ้นชัก หรือ ช๊อคซิปเห็นมีด \\
+ค. หากไม่มีมีดอยู่ในวันปีใหม่ ช๊อคชิปก็จะไม่เห็นมีด \\
+ง. ถ้ามีมีดอยู่ที่นั่นในวันปีใหม่ แสดงว่า มีดจะอยู่ในลิ้นชัก พร้อมๆ กับ ค้อนต้องอยู่ในโรงนาด้วย \\
+จ. แต่เราทุกคนรู้ดีว่าค้อนไม่ได้อยู่ในโรงนา \\
+จงหาข้อสรุปว่าลูกความมีความผิดหรือไม่ โดยใช้กระบวนการ direct deduction \\
+let ลูกความมีความผิด = p \\
+let มีดต้องอยู่ในลิ้นชัก = q \\
+let ช๊อคซิปเห็นมีด = r \\
+let มีมีดอยู่ในวันปีใหม่ = t \\
+let ค้อนต้องอยู่ในโรงนา = s
+}
+\begin{align}
+	&p \implies q \quad & Premise \\
+	&\neg q \lor r \quad & Premise \\
+	&\neg t \implies \neg q \quad & Premise \\
+	&t \implies (q \land s) \quad & Premise \\
+	&\neg s \quad & Premise \\
+	&q \implies t \quad & 3 \ Contrapositive \\
+	&p \implies t \quad & 1,6 \ Hypothetical Syllogism \\
+	&p \implies (q \land s) \quad & 4,7 \ Hypothetical Syllogism \\
+	&\neg p \lor (q \land s) \quad & 8 \ Material Implication \\
+	&(\neg p \lor q) \land (\neg p \lor s) \quad & 9 \ Distribution \\
+	&\neg p \lor s \quad & 10 \ Simplication \\
+	&p \implies s \quad & 11 \ Material Implication \\
+	&\neg p \quad & 5,12 \ Modus Tollens
+\end{align}
+\small
+{
+\therefore {ลูกความไม่มีความผิด}
+}
+
+\end{document}
